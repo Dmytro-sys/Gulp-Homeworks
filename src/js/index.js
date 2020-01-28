@@ -1,24 +1,45 @@
 import '@babel/polyfill';
 import './import/modules';
 import './import/components';
-
-function openDrop() {
-  this.$btn.classList.add('active');
-}
 /*
  * Chunks
  */
-import { DropdownConstructor } from './import/chunks/dropdown/dropdown.js';
+import {
+  DropdownConstructor
+} from './import/chunks/dropdown/dropdown.js';
+import {
+  User
+} from '%ui%/es6-class';
+import {
+  DOM
+} from '%ui%/dom-creator';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const dropDown_1 = new DropdownConstructor('[data-component="dropdown-1"]');
-  const dropDown_2 = new DropdownConstructor('[data-component="dropdown-2"]');
+  const dropDown = new DropdownConstructor('[data-component="dropdown-1"]');
 
-  const _openDrop1 = openDrop.bind(dropDown_1);
+  const h1 = DOM.create('h1');
+  // h1.setSize('10px', '20px')
+  //   .text('Hello!!!')
+  //   .attr('disabled', false)
+  //   .css(
+  //     {fontSize: '30px',
+  //      padding: '20px',
+  //      color: 'green'});
 
-  document.getElementById('js-lang').onclick = _openDrop1;
+  // console.log(h1);
 
-  //   setTimeout(() => {
-  //     removeEvent.call(dropDown, 2);
-  //   }, 4000)
+  const elms = DOM.createMany('p', 'input', 'button');
+
+  elms.forEach(item => {
+    item.setSize('40px', '20px')
+      .text('Homework!!!')
+      .attr('disabled', true)
+      .css({
+        fontSize: '30px',
+        padding: '20px',
+        color: 'green'
+      });
+  });
+
+  console.log(elms);
 });
