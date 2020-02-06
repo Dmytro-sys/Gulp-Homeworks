@@ -21,6 +21,23 @@
   }
 }
 
+.button {
+  padding: 10px 30px;
+  font-size: 20px;
+  background-color: cadetblue;
+  border: none;
+  border-radius: 5px;
+  display: block;
+  width: 150px;
+  margin: 20px auto;
+}
+
+.out {
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 30px;
+}
+
 .lang {
     position: fixed;
     bottom: 20px;

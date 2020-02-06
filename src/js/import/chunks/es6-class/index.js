@@ -1,17 +1,17 @@
 class User {
-  static _instance = null;
+    static _instance = null;
 
-  constructor({ name, surname } = {}) {
-    if (User._instance) return this;
-    this.name = name;
-    this.surname = surname;
+    constructor({name, surname} = {}) {
+        if (User._instance) return this;
+        this.name = name;
+        this.surname = surname;
 
-    User._instance = this;
-  }
+        User._instance = this;
+    }
 
-  getFullname() {
-    return `${this.name} ${this.surname}`;
-  }
+    getfullname() {
+        return `${this.name} ${this.surname}`;
+    }
 }
 
-export { User };
+export {User};
