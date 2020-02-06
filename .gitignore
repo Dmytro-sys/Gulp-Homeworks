@@ -10,6 +10,6 @@
 ehthumbs.db
 Thumbs.db
 node_modules
-dist
+# dist
 yarn.lock
 package-lock.json
