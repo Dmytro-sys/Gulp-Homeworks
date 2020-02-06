@@ -32,4 +32,4 @@ let callPromise = function () {
         });
 }
 
-export {randomValue, myPromise, callPromise};
+// export {randomValue, myPromise, callPromise};
